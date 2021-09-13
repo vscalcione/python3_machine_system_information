@@ -14,10 +14,12 @@ print(f"Release: {uname.release}")
 print(f"Version: {uname.version}")
 print(f"Machine: {uname.machine}")
 
-if uname.processor == "x86_64":
-    print(f"Processor: {uname.processor} (64 bit)")
-else:
-    print(f"Processor: {uname.processor} (32 bit)")
+print (f"Processor: {uname.processor} (64 bit)" if uname.processor == "x86_64" else f"Processor: {uname.processor} (32 bit)")
+
+#if uname.processor == "x86_64":
+#    print(f"Processor: {uname.processor} (64 bit)")
+#else:
+#    print(f"Processor: {uname.processor} (32 bit)")
 
 # Boot time informations
 print("="*40, "Boot Time", "="*40)
